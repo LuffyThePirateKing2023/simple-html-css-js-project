@@ -8,30 +8,27 @@ import MagicButton from "./MagicButton";
 
 const RecentProjects = () => {
 
-  // initial display
-  const firstView = 4
-  const [DisplayCount, setDisplayCount] = useState(4);
+  const [view, setView] = useState(4);
 
-  //handle the display count
-  const handleClick = () => {
-    if(DisplayCount === firstView){
-      setDisplayCount(DisplayCount + 4)
+  const showmoreItems = () => {
+    if(view === 20 || view === projects.length){
+      setView(4);
     }
-    else if(DisplayCount === projects.length){
-      setDisplayCount(firstView)
+    else{
+      setView((prev) => prev + 16 );
     }
-  };
+  }
 
-  const showLoadmore = DisplayCount < projects.length;
   return (
-    <div className="py-20">
+    <div className="py-20" id="projects">
       <h1 className="heading">
         Simple projects in{" "}
         <span className="text-purple">HTML CSS JS</span>
       </h1>
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.slice(0,DisplayCount).map((item) => (
+
+        {projects.slice(0, view).map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
@@ -97,19 +94,15 @@ const RecentProjects = () => {
             </PinContainer>
           </div>
         ))}
-      </div>
-        {showLoadmore && (
-            <div className="flex justify-center mt-4">
-                <MagicButton
-                  title={DisplayCount === projects.length ? "Show Less" : "Load More"}
-                  icon={<FaLocationArrow />}
-                  position="right"
-                  handleClick={handleClick}
+      </div> 
+        <div className="flex justify-center mt-4">
+              <MagicButton
+                title={view === 20 || view === projects.length ? "Show Less" : "Show All"}
+                icon={<FaLocationArrow />}
+                position="right"
+                handleClick={showmoreItems}
                 />
-            </div> 
-          )
-        }
-        
+        </div>       
     </div>
   );
 };

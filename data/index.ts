@@ -1,5 +1,6 @@
+
 export const navItems = [
-  { name: "About", link: "#about" },
+  { name: "Home", link:"#home"},
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
@@ -191,13 +192,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link:"https://github.com/LuffyThePirateKing2023"
   },
   {
     id: 2,
     img: "/twit.svg",
+    link:"https://www.facebook.com/gmkevin.garciano"
   },
   {
     id: 3,
     img: "/link.svg",
+    link:"https://www.linkedin.com/in/james-kevin-garciano-aba994286/"
   },
 ];
