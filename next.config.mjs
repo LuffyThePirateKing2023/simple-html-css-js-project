@@ -4,15 +4,6 @@ const nextConfig = {};
 
 export default withSentryConfig(withSentryConfig(nextConfig, {
     silent: true,
-    org: "na-b9j",
-    project: "javascript-nextjs",
-}, {
-    widenClientFileUpload: true,
-    transpileClientSDK: true,
-    hideSourceMaps: true,
-    disableLogger: true,
-    automaticVercelMonitors: true,
-}), {
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
@@ -45,4 +36,4 @@ export default withSentryConfig(withSentryConfig(nextConfig, {
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
-});
+}));
