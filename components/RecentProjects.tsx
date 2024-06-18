@@ -21,7 +21,7 @@ const RecentProjects = () => {
 
   return (
     <div className="py-20" id="projects">
-      <h1 className="heading md:mt-50">
+      <h1 className="heading">
         Simple projects in{" "}
         <span className="text-purple">HTML CSS JS</span>
       </h1>
