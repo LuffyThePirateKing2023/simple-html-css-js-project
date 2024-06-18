@@ -21,7 +21,7 @@ const RecentProjects = () => {
 
   return (
     <div className="py-20" id="projects">
-      <h1 className="heading">
+      <h1 className="heading md:mt-50">
         Simple projects in{" "}
         <span className="text-purple">HTML CSS JS</span>
       </h1>
@@ -101,7 +101,7 @@ const RecentProjects = () => {
                 icon={<FaLocationArrow />}
                 position="right"
                 handleClick={showmoreItems}
-                />
+              />
         </div>       
     </div>
   );
