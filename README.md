@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-      <img src="./public/readme.png" alt="Project Banner">
+      <img src="./public/readme.png" alt="Project Banner" style="width: 400px; height: 200px;">
   <br />
 
   <div>
